@@ -1,0 +1,343 @@
+/* Garante que o body e html ocupem toda a altura e largura da viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/*******************************************************************************************************
+                                                  cabeçalho
+*******************************************************************************************************/
+
+.fundo-cabecalho{
+position: fixed;
+z-index: 1;
+}
+
+.sobre {
+background-color: transparent;
+color: black; /* Cor do texto */
+border: none; /* Remove bordas */  
+text-align: center; /* Alinha o texto */
+top: 6%;
+text-decoration: none; /* Remove sublinhado */
+display: inline-block;
+font-family: "Bebas Neue", sans-serif;
+font-size: 2.5vw;
+position: fixed;
+left: 5%; /* Distância da esquerda (anteriormente right) */
+cursor: pointer; /* Muda o cursor ao passar o mouse */
+z-index: 2; /* Garante que o botão fique sobre outros conteúdos */
+letter-spacing: 0.10em;
+transition: 0.5s;
+}
+
+.sobre:hover {
+transform: scale(1.2); /* Aumenta o tamanho do texto ao passar o mouse */
+}
+
+.NomeSite {
+top: 2%; /* Ajuste para mover o título mais para cima se necessário */
+left: 50%;
+transform: translateX(-50%); /* Centraliza o título horizontalmente */
+position: fixed;
+z-index: 2;
+font-size: 3.5vw;
+text-align: center;
+font-family: 'Bebas Neue', sans-serif;
+color: #000;
+letter-spacing: 0.10em; /* Aumenta o espaçamento entre letras */
+transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.NomeSite:hover {
+transform: translateX(-50%) scale(1.1);
+}
+
+.logo {
+width: 15vw;
+max-width: 80vw;
+height: auto;
+top: 5%; 
+right: 5%; 
+z-index: 2; 
+transition: transform 0.3s;
+position: fixed;
+}
+
+.logo:hover {
+transform: scale(1.2);
+}
+
+.apresentacao {
+text-align: center;
+margin-top: 16%;
+}
+
+.enunciado {
+font-family: 'Bebas Neue', sans-serif;
+font-size: 3vw;
+color: black;
+}
+
+.videoapresentacao {
+height: 25vw;
+border-radius: 50px;
+}
+
+.divisoria, .divisoria2 {
+transform: scaleX(4);
+}
+
+.divisoria{
+margin-top: -10%;
+}
+
+@media (max-width: 500px) {
+  .fundo-cabecalho{
+    margin-top: -3%;
+  }
+  
+  .sobre{
+    font-size: 5vw;
+    margin-left: -1%;
+  }
+
+  .NomeSite {
+    font-size: 6.7vw; 
+  }
+  
+  .logo{   
+    width: 23vw;
+    margin-top: 2%;
+  }
+    
+.apresentacao {
+    margin-top: 40%;
+  }
+
+.enunciado{
+    font-size: 6vw; 
+}
+
+.videoapresentacao {
+    height: 50vw;
+}
+
+.divisoria{
+  margin-top: -25%;
+}
+}
+
+@media (max-width: 400px){
+.apresentacao{
+  margin-top: 60%;
+}
+
+.divisoria{
+  margin-top: -50%;
+}
+}
+
+/*******************************************************************************************************
+                                                  Categorias
+*******************************************************************************************************/
+
+
+.container-fluid{
+margin-top: -10vw;
+margin-bottom: 12vh;
+}
+
+.row{
+padding-bottom: 5vw;
+}
+
+.categorias{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.TextoCategoriaUnidades, 
+.TextoCategoriaEquipamentos, 
+.TextoCategoriaComponentes, 
+.TextoCategoriaConceitos{
+background: rgb(241, 242, 248);
+border-radius: 70px;
+padding: 1vw 4vw;
+text-decoration: none;
+color: rgb(0, 0, 0);
+font-family: "Bebas Neue", sans-serif;
+font-size: 2.5vw;
+text-align: center;
+transition: 0.5s;
+margin-left: 2vw;
+max-width: 20vw;
+}
+
+.TextoCategoriaConceitos{
+margin-left: 3.5vw;
+}
+
+.TextoCategoriaUnidades:hover, 
+.TextoCategoriaEquipamentos:hover, 
+.TextoCategoriaComponentes:hover, 
+.TextoCategoriaConceitos:hover{
+color: black;
+text-decoration: none;
+letter-spacing: 0.15vw;
+background-color: rgb(169, 232, 169);
+box-shadow: 0 0 35px rgb(14, 229, 14);
+}
+
+.VideoCategoria {
+height: 13vw;
+border-radius: 50px;
+}
+
+@media (max-width: 500px){
+.container-fluid{
+  margin-top: -33vw;
+}
+
+.row{
+  padding-bottom: 1vw;
+}
+
+.categorias{
+  margin-bottom: 10vw;
+}
+
+.TextoCategoriaUnidades, 
+.TextoCategoriaEquipamentos, 
+.TextoCategoriaComponentes, 
+.TextoCategoriaConceitos{
+  background: rgb(241, 242, 248);
+  border-radius: 70px;
+  padding: 2vw 7vw;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  transition: 0.5s;
+  margin-left: 2vw;
+  max-width: 35vw;
+}
+
+.TextoCategoriaConceitos{
+  margin-left: 3.5vw;
+}
+
+.TextoCategoriaUnidades:hover, 
+.TextoCategoriaEquipamentoshover, 
+.TextoCategoriaComponenteshover, 
+.TextoCategoriaConceitoshover{
+  color: black;
+  text-decoration: none;
+  letter-spacing: 0.15vw;
+  background-color: rgb(169, 232, 169);
+  box-shadow: 0 0 35px rgb(14, 229, 14);
+}
+
+.VideoCategoria {
+  height: 25vw;
+  margin-right: 2vw;
+  border-radius: 50px;
+}
+}
+
+@media (max-width: 400px){
+  .container-fluid{
+    margin-top: -50vw;
+    margin-bottom: 10vh;
+  }
+
+  .TextoCategoriaUnidades{
+    margin-left: 3vw;
+  }
+
+  .TextoCategoriaConceitos{
+    margin-left: 4vw;
+  }
+}
+
+/*******************************************************************************************************
+                                                  Rodapé
+*******************************************************************************************************/
+
+#RowLinkedin{
+padding: 0;
+padding-bottom: 2vw;
+}
+
+#RowEmail{
+padding: 0;
+}
+
+#bottom{
+margin-bottom: -53vh;
+}
+
+#ColLinkedin,
+#ColLinkedin2 {
+display: flex;
+flex-direction: column;
+row-gap: 2vw;
+justify-content: space-between; 
+align-items: center; 
+}
+
+.login, 
+.email{
+color: black;
+font-size: 2vw;
+font-family: "Bebas Neue", sans-serif;
+transition: 0.5s;
+}
+
+.login:hover{
+text-decoration: none;
+color: black;
+letter-spacing: 0.1vw;
+}
+
+.login i,
+.email i {
+padding-right: 0.5vw;
+}
+
+.lattes{
+  height: 2.5vw;
+}
+
+.email {
+text-align: center; 
+flex: 1; 
+padding-left: 6vw;
+padding-right: 6vw;
+}
+
+@media (max-width: 500px){
+  #bottom{
+    margin-bottom: -45vh;
+  }
+
+  .login,
+  .email{
+    font-size: 5.5vw;
+  }
+
+  .lattes{
+    height: 5vw;
+  }
+
+  .FundoFooter{
+    max-height: 300px;
+  }
+}
